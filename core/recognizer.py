@@ -1,16 +1,30 @@
 import speech_recognition as sr
+from config.settings import RECOGNITION_LANGUAGE, RECOGNITION_TIMEOUT, RECOGNITION_PHRASE_TIMEOUT
+from utils.logger import logger
+from utils.exceptions import RecognitionError
 
 def recognize_speech():
     recognizer = sr.Recognizer()
+    recognizer.energy_threshold = 4000
+    recognizer.dynamic_energy_threshold = True
     with sr.Microphone() as source:
-        print("Dinleniyor...")
-        audio = recognizer.listen(source)
+        logger.debug("Dinleniyor...")
+        try:
+            audio = recognizer.listen(
+                source,
+                timeout=RECOGNITION_TIMEOUT,
+                phrase_time_limit=RECOGNITION_PHRASE_TIMEOUT
+            )
+        except sr.WaitTimeoutError:
+            raise RecognitionError("Ses algılanamadı")
+        except Exception as e:
+            raise RecognitionError(f"Mikrofon hatası: {str(e)}")
 
     try:
-        text = recognizer.recognize_google(audio, language="tr-TR")
-        print("Algılanan:", text)
+        text = recognizer.recognize_google(audio, language=RECOGNITION_LANGUAGE)
+        logger.debug(f"Algılanan: {text}")
         return text.lower()
     except sr.UnknownValueError:
-        return "anlaşılamadı"
-    except sr.RequestError:
-        return "bağlantı hatası"
+        raise RecognitionError("Ses anlaşılamadı")
+    except sr.RequestError as e:
+        raise RecognitionError(f"Google Speech API hatası: {str(e)}")

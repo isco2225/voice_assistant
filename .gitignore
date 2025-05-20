@@ -1,0 +1,16 @@
+# Virtual environment
+venv/
+env/
+.env
+
+# IDE specific files
+.vscode/
+.idea/
+
+# Logs
+logs/
+*.log
+
+# Local configuration
+.env
+.env.local 
