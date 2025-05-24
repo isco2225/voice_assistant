@@ -28,7 +28,6 @@ def speak(text):
         SynthesisError: If speech synthesis fails
     """
     try:
-        logger.debug(f"Speaking: {text}")
         engine.say(text)
         engine.runAndWait()
     except Exception as e:

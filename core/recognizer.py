@@ -4,11 +4,20 @@ from utils.logger import logger
 from utils.exceptions import RecognitionError
 
 def recognize_speech():
+    """
+    Recognize speech from microphone input
+    
+    Returns:
+        str: Recognized text in lowercase
+        
+    Raises:
+        RecognitionError: If speech recognition fails
+    """
     recognizer = sr.Recognizer()
     recognizer.energy_threshold = 4000
     recognizer.dynamic_energy_threshold = True
+    
     with sr.Microphone() as source:
-        logger.debug("Dinleniyor...")
         try:
             audio = recognizer.listen(
                 source,
@@ -22,7 +31,6 @@ def recognize_speech():
 
     try:
         text = recognizer.recognize_google(audio, language=RECOGNITION_LANGUAGE)
-        logger.debug(f"Algılanan: {text}")
         return text.lower()
     except sr.UnknownValueError:
         raise RecognitionError("Ses anlaşılamadı")
