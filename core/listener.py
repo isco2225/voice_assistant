@@ -13,7 +13,7 @@ def callback(indata, frames, time, status):
 def listen():
     print("🎧 [listener] Vosk ile dinleme başlatıldı...")
 
-    model = Model("vosk-model-small-tr-0.3")  # Model klasörün ismiyle birebir aynı olmalı
+    model = Model("vosk-model-small-tr-0.3")
     recognizer = KaldiRecognizer(model, 16000)
 
     with sd.RawInputStream(samplerate=16000, blocksize=8000, dtype='int16',

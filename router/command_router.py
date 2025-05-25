@@ -1,7 +1,6 @@
 from core.synthesizer import speak
 from utils.normalizer import normalize_text
 from utils.fuzzy_matcher import match_command
-
 from features.registry import *
 
 
@@ -23,8 +22,12 @@ def handle_command(text):
         handle_time_command()
     elif command_key == "date":
         handle_date_command()
-    elif any(keyword in text for keyword in ["bilgi ver", "bir bilgi ver", "rastgele bilgi"]):
+    elif command_key == "developer_mode":
+        open_developer_mode()
+    elif command_key == "fact" or any(keyword in text for keyword in ["bilgi ver", "bir bilgi ver", "rastgele bilgi"]):
         give_fact()
+    elif command_key == "history_today":
+        tell_today_in_history()
     else:
-        speak("anlayamadım.")
+        speak("Anlayamadım.")
         print(f"❓ Anlaşılamayan komut: {text}")

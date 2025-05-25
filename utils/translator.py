@@ -1,7 +1,8 @@
 import requests
+from config.config import TRANSLATE_API_URL
 
 def translate_to_turkish(text):
-    url = "https://ftapi.pythonanywhere.com/translate"
+    url = TRANSLATE_API_URL
     params = {
         "dl": "tr",
         "text": text

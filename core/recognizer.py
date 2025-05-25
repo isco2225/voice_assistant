@@ -1,7 +1,5 @@
 import speech_recognition as sr
-from config.settings import RECOGNITION_LANGUAGE, RECOGNITION_TIMEOUT, RECOGNITION_PHRASE_TIMEOUT
-from utils.logger import logger
-from utils.exceptions import RecognitionError
+from config.config import RECOGNITION_LANGUAGE, RECOGNITION_TIMEOUT, RECOGNITION_PHRASE_TIMEOUT
 
 def recognize_speech():
     """

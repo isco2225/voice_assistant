@@ -1,6 +1,7 @@
 from core.synthesizer import speak
 from features.facts.facts_service import fetch_random_fact
-from features.facts.facts_translator import translate_to_turkish
+from utils.translator import translate_to_turkish
+
 
 def give_fact():
     speak("Bir bilgi getiriyorum...")

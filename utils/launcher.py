@@ -2,9 +2,11 @@ import os
 import webbrowser
 import winsound
 from core.synthesizer import speak
+from config.config import BEEP_FREQUENCY, BEEP_DURATION
+
 
 def play_beep():
-    winsound.Beep(1000, 300)
+    winsound.Beep(BEEP_FREQUENCY, BEEP_DURATION)
 
 def launch(target: str, name: str, is_web: bool = False):
     speak(f"{name} açılıyor.")

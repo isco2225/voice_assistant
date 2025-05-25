@@ -11,6 +11,10 @@ from features.time_and_history.time_query import handle_time_command, handle_dat
 # modes
 from features.modes.developer_mode import open_developer_mode
 
+# history_today
+from features.history_today.history_today_controller import tell_today_in_history
+
+
 __all__ = [
     "give_fact",
     "open_application",
@@ -18,4 +22,5 @@ __all__ = [
     "handle_time_command",
     "handle_date_command",
     "open_developer_mode",
+    "tell_today_in_history",
 ]

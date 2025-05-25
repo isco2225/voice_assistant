@@ -3,12 +3,15 @@ from rapidfuzz import process
 COMMAND_MAP = {
     "spotify aç": "spotify",
     "youtube aç": "youtube",
-    "google aç": "browser",
     "tarayıcıyı aç": "browser",
-    "geliştirici modu": "vs_code",
+    "google aç": "browser",
     "vs code aç": "vs_code",
+    "geliştirici modu": "developer_mode",
     "saat kaç": "time",
     "bugün tarih": "date",
+    "bilgi ver": "fact",
+    "bugün ne oldu": "history_today",
+    "tarihte bugün": "history_today"
 }
 
 def match_command(text: str, threshold: int = 75) -> str | None:
