@@ -2,12 +2,7 @@ from core.listener import listen
 from core.synthesizer import speak
 from router.command_router import handle_command
 import time
-import winsound
-from config.config import BEEP_FREQUENCY, BEEP_DURATION
-
-
-def play_beep():
-    winsound.Beep(BEEP_FREQUENCY, BEEP_DURATION)
+from utils.information_sound import play_beep
 
 def main():
     print("🎙️ Voice Assistant başlatıldı. Dinlemeye geçiliyor...")
