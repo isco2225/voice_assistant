@@ -1,25 +1,19 @@
-from core.listener import listen
-from core.synthesizer import speak
+from core.interface.recognizer import recognize_speech
+from core.interface.synthesizer import speak
+from core.exceptions import RecognitionError
 from router.command_router import handle_command
-import time
-from utils.information_sound import play_beep
 
 def main():
-    print("🎙️ Voice Assistant başlatıldı. Dinlemeye geçiliyor...")
-    speak("Voice assistant başlatıldı. Ne yapmamı istersiniz.")
-
+    speak("Asistan başlatıldı. Ne yapmamı istersin?")
     while True:
-        print("🎤 Dinleme başlıyor...")
-        play_beep()
-        text = listen()
-
-        if text:
-            print(f"🗣️ Komut: {text}")
-            handle_command(text)
-        else:
-            print("🔇 Sessizlik veya anlaşılmayan ses algılandı, dinlemeye devam ediliyor...")
-
-        time.sleep(0.5)
+        try:
+            print('dinleme başladı...')
+            text = recognize_speech()
+            if text:
+                print('Komut: '+text)
+                handle_command(text)
+        except RecognitionError as e:
+            speak(str(e))
 
 if __name__ == "__main__":
     main()

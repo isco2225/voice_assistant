@@ -1,6 +1,6 @@
 import os
 import webbrowser
-from core.synthesizer import speak
+from core.interface.synthesizer import speak
 from utils.information_sound import play_beep
 
 def launch(target: str, name: str, is_web: bool = False):

@@ -1,5 +1,5 @@
 from utils.launcher import launch
-from core.synthesizer import speak
+from core.interface.synthesizer import speak
 
 def open_developer_mode():
     speak("Geliştirici modu başlatılıyor. Lütfen bekleyin.")

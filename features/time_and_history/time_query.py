@@ -1,5 +1,5 @@
 from datetime import datetime
-from core.synthesizer import speak
+from core.interface.synthesizer import speak
 
 def handle_time_command():
     now = datetime.now()

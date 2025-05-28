@@ -1,6 +1,6 @@
 from features.history_today.history_today_service import fetch_today_event
 from utils.translator import translate_to_turkish
-from core.synthesizer import speak
+from core.interface.synthesizer import speak
 
 def tell_today_in_history():
     speak("Bugün tarihte ne olmuş bir bakalım...")

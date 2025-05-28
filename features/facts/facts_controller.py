@@ -1,4 +1,4 @@
-from core.synthesizer import speak
+from core.interface.synthesizer import speak
 from features.facts.facts_service import fetch_random_fact
 from utils.translator import translate_to_turkish
 
