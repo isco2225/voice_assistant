@@ -20,4 +20,4 @@ def recognize_with_google():
     except sr.UnknownValueError:
         raise RecognitionError("Ses anlaşılamadı.")
     except sr.RequestError as e:
-        raise RecognitionError(f"Google API hatası: ")
+        raise RecognitionError(f"internet bağlantınızı kontrol ediniz.")

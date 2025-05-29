@@ -2,20 +2,21 @@ import requests
 from config.config import TRANSLATE_API_URL
 
 def translate_to_turkish(text):
-    url = TRANSLATE_API_URL
-    params = {
-        "dl": "tr",
-        "text": text
-    }
     try:
-        response = requests.get(url, params=params, timeout=10)
-        if response.status_code == 200:
-            data = response.json()
-            return data.get("destination-text", text)
+        response = requests.get(TRANSLATE_API_URL, params={"dl": "tr", "text": text}, timeout=10)
+        response.raise_for_status()
+
+        data = response.json()
+        translated = data.get("destination-text")
+        if translated:
+            return translated
         else:
-            print(f"Çeviri hatası: {response.status_code}")
-            print(f"Çeviri hatası: {response.text}")
-            return text
+            print("⚠️ API yanıtında çeviri bulunamadı.")
+            return None
+    except requests.Timeout:
+        print("⏱️ Çeviri API zaman aşımına uğradı.")
     except requests.RequestException as e:
-        print(f"İstek hatası: {e}")
-        return text
+        print(f"🌐 Çeviri isteği hatası: {e}")
+    except Exception as e:
+        print(f"❌ Beklenmeyen çeviri hatası: {e}")
+    return None  # veya return text
