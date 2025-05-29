@@ -20,12 +20,16 @@ COMMAND_MAP = {
     "bir bilgi ver": "fact",
     "bugün ne oldu": "history_today",
     "tarihte bugün": "history_today",
+    "internette araştır": "wikipedia_search",
+    "wikipedia'da ara": "wikipedia_search",
+    "wikipedia": "wikipedia_search",
 }
 
 def match_command(text: str, threshold: int = 75) -> str | None:
     result = process.extractOne(text, COMMAND_MAP.keys())
     if result:
         best_match, score, _ = result
+        print(f"🧪 Eşleşme: {best_match} (skor: {score})")  # DEBUG
         if score >= threshold:
             return COMMAND_MAP[best_match]
     return None

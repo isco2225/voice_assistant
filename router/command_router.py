@@ -12,7 +12,8 @@ COMMAND_ACTIONS = {
     "date": handle_date_command,
     "developer_mode": open_developer_mode,
     "fact": give_fact,
-    "history_today": tell_today_in_history
+    "history_today": tell_today_in_history,
+    "wikipedia_search": search_wikipedia,
 }
 
 def handle_command(text: str):

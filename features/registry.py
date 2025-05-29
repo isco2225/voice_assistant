@@ -14,6 +14,10 @@ from features.modes.developer_mode import open_developer_mode
 # history_today
 from features.history_today.history_today_controller import tell_today_in_history
 
+# wikipedia
+from features.wikipedia.wikipedia_controller import search_wikipedia
+
+
 
 __all__ = [
     "give_fact",
@@ -23,4 +27,5 @@ __all__ = [
     "handle_date_command",
     "open_developer_mode",
     "tell_today_in_history",
+    "search_wikipedia",
 ]
