@@ -1,4 +1,6 @@
 from rapidfuzz import process
+from utils.normalizer import normalize_text
+
 
 COMMAND_MAP = {
     "spotify aç": "spotify",
@@ -26,10 +28,13 @@ COMMAND_MAP = {
 }
 
 def match_command(text: str, threshold: int = 75) -> str | None:
-    result = process.extractOne(text, COMMAND_MAP.keys())
+    normalized_text = normalize_text(text)
+    normalized_commands = {normalize_text(cmd): val for cmd, val in COMMAND_MAP.items()}
+    
+    result = process.extractOne(normalized_text, normalized_commands.keys())
     if result:
         best_match, score, _ = result
-        print(f"🧪 Eşleşme: {best_match} (skor: {score})")  # DEBUG
+        print(f"🧪 Eşleşme: {best_match} (skor: {score})")
         if score >= threshold:
-            return COMMAND_MAP[best_match]
+            return normalized_commands[best_match]
     return None
