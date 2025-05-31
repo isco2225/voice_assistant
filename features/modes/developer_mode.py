@@ -6,7 +6,7 @@ def open_developer_mode():
 
     apps_to_launch = [
         {
-            "path": r"C:\Program Files\Docker\Docker Desktop.exe",
+            "path": r"C:\ProgramData\Microsoft\Windows\Start Menu\Docker Desktop.lnk",
             "name": "Docker Desktop"
         },
         {
@@ -14,7 +14,7 @@ def open_developer_mode():
             "name": "Visual Studio Code"
         },
         {
-            "path": r"C:\Program Files\Beekeeper Studio\beekeeper-studio.exe",
+            "path": r"C:\Users\omran\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Beekeeper Studio.lnk",
             "name": "Beekeeper Studio"
         }
     ]
