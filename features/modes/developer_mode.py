@@ -21,5 +21,3 @@ def open_developer_mode():
 
     for app in apps_to_launch:
         launch(app["path"], app["name"])
-
-    speak("Tüm geliştirici araçları başlatıldı.")

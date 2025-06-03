@@ -5,7 +5,6 @@ def translate_to_turkish(text):
     try:
         response = requests.get(TRANSLATE_API_URL, params={"dl": "tr", "text": text}, timeout=10)
         response.raise_for_status()
-
         data = response.json()
         translated = data.get("destination-text")
         if translated:
@@ -19,4 +18,4 @@ def translate_to_turkish(text):
         print(f"🌐 Çeviri isteği hatası: {e}")
     except Exception as e:
         print(f"❌ Beklenmeyen çeviri hatası: {e}")
-    return None  # veya return text
+    return None 

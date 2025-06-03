@@ -30,7 +30,6 @@ COMMAND_MAP = {
 def match_command(text: str, threshold: int = 75) -> str | None:
     normalized_text = normalize_text(text)
     normalized_commands = {normalize_text(cmd): val for cmd, val in COMMAND_MAP.items()}
-    
     result = process.extractOne(normalized_text, normalized_commands.keys())
     if result:
         best_match, score, _ = result
