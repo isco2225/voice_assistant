@@ -6,6 +6,9 @@ from features.registry import *
 COMMAND_ACTIONS = {
     "spotify": lambda: open_application("spotify"),
     "youtube": lambda: open_website("youtube"),
+    "github": lambda: open_website("github"),
+    "linkedin": lambda: open_website("linkedin"),
+    "instagram": lambda: open_website("instagram"),
     "browser": lambda: open_website("browser"),
     "vs_code": lambda: open_application("vs_code"),
     "time": handle_time_command,
