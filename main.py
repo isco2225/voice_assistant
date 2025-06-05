@@ -5,7 +5,7 @@ from features.welcome.welcome import handle_welcome
 from router.command_router import handle_command
 
 def main():
-    handle_welcome(15)
+    handle_welcome(24)
     while True:
         try:
             print('dinleme başladı...')
