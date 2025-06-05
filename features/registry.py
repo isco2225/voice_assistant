@@ -20,7 +20,8 @@ from features.wikipedia.wikipedia_controller import search_wikipedia
 # exchange rate
 from features.exchange_rate.exchange_rate_controller import tell_exchange_rate
 
-
+# weather
+from features.weather.weather_controller import give_weather_advice
 
 __all__ = [
     "give_fact",
@@ -32,4 +33,5 @@ __all__ = [
     "tell_today_in_history",
     "search_wikipedia",
     "tell_exchange_rate",
+    "give_weather_advice",
 ]

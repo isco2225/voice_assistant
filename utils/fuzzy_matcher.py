@@ -31,7 +31,9 @@ COMMAND_MAP = {
     "internette araştır": "wikipedia_search",
     "wikipedia'da ara": "wikipedia_search",
     "wikipedia": "wikipedia_search",
-    "döviz kuru": "exchange_rate"
+    "döviz kuru": "exchange_rate",
+    "hava durumu": "weather",
+    "hava nasıl": "weather",
 }
 
 def match_command(text: str, threshold: int = 75) -> str | None:

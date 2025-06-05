@@ -18,6 +18,7 @@ COMMAND_ACTIONS = {
     "history_today": tell_today_in_history,
     "wikipedia_search": search_wikipedia,
     "exchange_rate": tell_exchange_rate,
+    "weather": give_weather_advice,
 }
 
 def handle_command(text: str):
