@@ -24,14 +24,11 @@ def handle_evening_greeting():
     speak("İyi akşamlar.")
     give_weather_advice()
 
-def handle_welcome(hour: int):
+def handle_welcome():
     if not has_internet_connection():
         speak("Selam, Kaliteli bir hizmet alabilmek için internete bağlanın")
         return
-        
-    #now = datetime.now()
-    #hour = now.hour
-
+    hour = datetime.now().hour
     if 9 <= hour < 13:
         handle_morning_greeting()
     elif 13 <= hour < 23:
