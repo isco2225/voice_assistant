@@ -17,6 +17,9 @@ from features.history_today.history_today_controller import tell_today_in_histor
 # wikipedia
 from features.wikipedia.wikipedia_controller import search_wikipedia
 
+# exchange rate
+from features.exchange_rate.exchange_rate_controller import tell_exchange_rate
+
 
 
 __all__ = [
@@ -28,4 +31,5 @@ __all__ = [
     "open_developer_mode",
     "tell_today_in_history",
     "search_wikipedia",
+    "tell_exchange_rate",
 ]

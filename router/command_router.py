@@ -17,6 +17,7 @@ COMMAND_ACTIONS = {
     "fact": give_fact,
     "history_today": tell_today_in_history,
     "wikipedia_search": search_wikipedia,
+    "exchange_rate": tell_exchange_rate,
 }
 
 def handle_command(text: str):

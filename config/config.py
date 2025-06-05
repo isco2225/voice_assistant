@@ -26,9 +26,10 @@ NOTES_FILE_PATH = os.getenv("NOTES_FILE_PATH", os.path.join("data", "notes.txt")
 # ------------------------------
 # 🌐 API Ayarları
 # ------------------------------
-TRANSLATE_API_URL = os.getenv("TRANSLATE_API_URL", "https://ftapi.pythonanywhere.com/translate")
-FACTS_API_URL = os.getenv("FACTS_API_URL", "https://uselessfacts.jsph.pl/random.json?language=en")
-HISTORY_TODAY_API_URL = os.getenv("HISTORY_TODAY_API_URL", "https://history.muffinlabs.com/date")
+TRANSLATE_API_URL = os.getenv("TRANSLATE_API_URL")
+FACTS_API_URL = os.getenv("FACTS_API_URL")
+HISTORY_TODAY_API_URL = os.getenv("HISTORY_TODAY_API_URL")
+EXCHANGE_RATE_API_URL = os.getenv("EXCHANGE_RATE_API_URL")
 # ------------------------------
 # 🔈 Bip Sesi Ayarları
 # ------------------------------
