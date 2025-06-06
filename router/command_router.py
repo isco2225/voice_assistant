@@ -1,6 +1,7 @@
 from core.interface.synthesizer import speak
 from utils.normalizer import normalize_text
 from utils.fuzzy_matcher import match_command
+from utils.printer import customPrint, warningPrint, Emojis
 from features.registry import *
 
 COMMAND_ACTIONS = {
@@ -25,10 +26,9 @@ def handle_command(text: str):
     normalized = normalize_text(text)
     command_key = match_command(normalized)
 
-    print(f"🔍 Eşleşen komut: {command_key}")
-
-    if command_key in COMMAND_ACTIONS:
+    if command_key:
+        customPrint(Emojis.SEARCH, f"Eşleşen komut: {command_key}")
         COMMAND_ACTIONS[command_key]()
     else:
         speak("Anlayamadım.")
-        print(f"❓ Anlaşılamayan komut: {text}")
+        warningPrint(f"Anlaşılamayan komut: {text}")

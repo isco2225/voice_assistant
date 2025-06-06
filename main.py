@@ -3,15 +3,17 @@ from core.interface.synthesizer import speak
 from core.exceptions import RecognitionError
 from features.welcome.welcome import handle_welcome
 from router.command_router import handle_command
+from utils.printer import systemPrint, infoPrint, customPrint, Emojis
 
 def main():
+    systemPrint("Sesli Asistan başlatılıyor...")
     handle_welcome()
     while True:
         try:
-            print('dinleme başladı...')
+            customPrint(Emojis.MICROPHONE, "Dinleme başladı...")
             text = recognize_speech()
             if text:
-                print('Komut: '+text)
+                customPrint(Emojis.MATCH, f"Algılanan komut: {text}")
                 handle_command(text)
         except RecognitionError as e:
             speak(str(e))
