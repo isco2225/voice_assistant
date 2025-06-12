@@ -1,4 +1,3 @@
-from core.interface.synthesizer import speak
 from utils.normalizer import normalize_text
 from utils.fuzzy_matcher import match_command
 from utils.printer import customPrint, warningPrint, Emojis
@@ -30,5 +29,5 @@ def handle_command(text: str):
         customPrint(Emojis.SEARCH, f"Eşleşen komut: {command_key}")
         COMMAND_ACTIONS[command_key]()
     else:
-        speak("Anlayamadım.")
+        print("Anlayamadım.")
         warningPrint(f"Anlaşılamayan komut: {text}")
