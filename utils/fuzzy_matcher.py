@@ -34,6 +34,7 @@ COMMAND_MAP = {
     "hava nasıl": "weather",
     "uzay bilgisi": "space_information",
     "uzay fotoğraf": "space_information",
+    "yapay zeka": "ai_assistant",
 }
 
 def match_command(text: str, threshold: int = 75) -> str | None:
@@ -42,7 +43,7 @@ def match_command(text: str, threshold: int = 75) -> str | None:
     result = process.extractOne(normalized_text, normalized_commands.keys())
     if result:
         best_match, score, _ = result
-        print(f"🧪 Eşleşme: {best_match} (skor: {score})")
+        print(f"Eşleşme: {best_match} (skor: {score})")
         if score >= threshold:
             return normalized_commands[best_match]
     return None

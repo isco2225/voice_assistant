@@ -20,6 +20,7 @@ COMMAND_ACTIONS = {
     "exchange_rate": tell_exchange_rate,
     "weather": give_weather_advice,
     "space_information": give_space_info,
+    "ai_assistant": ask_question_to_ai,
 }
 
 def handle_command(text: str):

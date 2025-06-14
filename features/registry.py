@@ -26,6 +26,10 @@ from features.weather.weather_controller import give_weather_advice
 # weather
 from features.space_information.space_information_controller import give_space_info
 
+
+# ai_assistant
+from features.ai_assistant.ai_assistant_controller import ask_question_to_ai
+
 __all__ = [
     "give_fact",
     "open_application",
@@ -38,4 +42,5 @@ __all__ = [
     "tell_exchange_rate",
     "give_weather_advice",
     "give_space_info",
+    "ask_question_to_ai",
 ]
