@@ -16,7 +16,7 @@ def ask_question_to_ai():
 
     if answer:
         speak(answer)
-        print(f"🧠 Yapay Zeka Cevabı: {answer}")
+        print(f"Yapay Zeka Cevabı: {answer}")
     else:
         speak("Yapay zekadan cevap alınamadı.")
 

@@ -14,10 +14,10 @@ def fetch_random_fact():
             print("API yanıtında 'text' bulunamadı.")
             return None
     except requests.Timeout:
-        print("⏱️ İstek zaman aşımına uğradı.")
+        print("İstek zaman aşımına uğradı.")
     except requests.RequestException as e:
-        print(f"🌐 İstek hatası: {e}")
+        print(f"İstek hatası: {e}")
     except Exception as e:
-        print(f"❌ Beklenmeyen hata: {e}")
+        print(f"Beklenmeyen hata: {e}")
 
     return None

@@ -22,10 +22,10 @@ def fetch_space_info():
             return None
 
     except requests.Timeout:
-        print("⏱️ NASA API isteği zaman aşımına uğradı.")
+        print("NASA API isteği zaman aşımına uğradı.")
     except requests.RequestException as e:
-        print(f"🌐 İstek hatası: {e}")
+        print(f"İstek hatası: {e}")
     except Exception as e:
-        print(f"❌ Beklenmeyen hata: {e}")
+        print(f"Beklenmeyen hata: {e}")
 
     return None

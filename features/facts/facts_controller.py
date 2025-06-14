@@ -11,8 +11,8 @@ def give_fact():
     translated_fact = translate_to_turkish(fact)
     if translated_fact:
         speak(translated_fact)
-        print(f"📚 Bilgi (TR): {translated_fact}")
+        print(f"Bilgi (TR): {translated_fact}")
     else:
         speak("Bilgiyi çeviremedim ama orijinalini okuyorum.")
         speak(fact)
-        print(f"📚 Orijinal Bilgi (EN): {fact}")
+        print(f"Orijinal Bilgi (EN): {fact}")

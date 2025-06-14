@@ -18,7 +18,7 @@ def handle_morning_greeting():
 
     message = f"Bir Amerikan doları {usd:.1f} Türk lirası, bir Euro ise {eur:.1f} Türk lirası."
     speak(message)
-    print(f"📢 {message}")
+    print(f"{message}")
 
 def handle_evening_greeting():
     speak("İyi akşamlar.")

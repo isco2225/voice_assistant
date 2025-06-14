@@ -24,6 +24,5 @@ def give_weather_advice():
     )
 
     speak(message + advice)
-
-    print(f"🌤 {message}")
-    print(f"🧥 Tavsiye: {advice}")
+    print(f"{message}")
+    print(f"Tavsiye: {advice}")

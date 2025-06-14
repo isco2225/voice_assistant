@@ -22,10 +22,10 @@ def fetch_exchange_data():
             return None
 
     except requests.Timeout:
-        print("⏱️ Döviz API isteği zaman aşımına uğradı.")
+        print("Döviz API isteği zaman aşımına uğradı.")
     except requests.RequestException as e:
-        print(f"🌐 Döviz API bağlantı hatası: {e}")
+        print(f"Döviz API bağlantı hatası: {e}")
     except Exception as e:
-        print(f"❌ Beklenmeyen döviz servisi hatası: {e}")
+        print(f"Beklenmeyen döviz servisi hatası: {e}")
 
     return None

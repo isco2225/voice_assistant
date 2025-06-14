@@ -19,4 +19,4 @@ def tell_exchange_rate():
     )
 
     speak(message)
-    print(f"📢 {message}")
+    print(f"{message}")

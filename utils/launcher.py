@@ -15,4 +15,4 @@ def launch(target: str, name: str, is_web: bool = False):
         speak(f"{name} bulunamadı.")
     except Exception as e:
         speak(f"{name} açılırken bir hata oluştu.")
-        print(f"🔥 Başlatma hatası ({name}): {e}")
+        print(f"Başlatma hatası ({name}): {e}")

@@ -18,14 +18,13 @@ def fetch_today_event():
                 return year, text
             else:
                 print("Etkinlik verisi eksik.")
+                return None
         else:
             print("Etkinlik listesi boş.")
+            return None
 
-    except requests.Timeout:
-        print("⏱️ İstek zaman aşımına uğradı.")
-    except requests.RequestException as e:
-        print(f"🌐 İstek hatası: {e}")
+    except TimeoutError:
+        print("İstek zaman aşımına uğradı.")
     except Exception as e:
-        print(f"❌ Beklenmeyen hata: {e}")
-
+        print(f"İstek hatası: {e}")
     return None, None

@@ -13,9 +13,9 @@ def translate_to_turkish(text):
             print("API yanıtında çeviri bulunamadı.")
             return None
     except requests.Timeout:
-        print("⏱️ Çeviri API zaman aşımına uğradı.")
+        print("Çeviri API zaman aşımına uğradı.")
     except requests.RequestException as e:
-        print(f"🌐 Çeviri isteği hatası: {e}")
+        print(f"Çeviri isteği hatası: {e}")
     except Exception as e:
-        print(f"❌ Beklenmeyen çeviri hatası: {e}")
+        print(f"Beklenmeyen çeviri hatası: {e}")
     return None 

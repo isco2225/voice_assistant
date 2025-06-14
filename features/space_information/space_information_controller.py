@@ -17,8 +17,8 @@ def give_space_info():
     try:
         webbrowser.open(data["url"])
     except Exception as e:
-        print(f"🌐 Tarayıcıda açma hatası: {e}")
+        print(f"Tarayıcıda açma hatası: {e}")
 
     speak(f"Başlık: {title_tr}")
     speak(explanation_tr)
-    print(f"📷 URL: {data['url']}")
+    print(f"URL: {data['url']}")

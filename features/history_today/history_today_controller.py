@@ -19,4 +19,4 @@ def tell_today_in_history():
         message = f"{year} yılında bugün, {text}"
 
     speak(message)
-    print(f"📜 {message}")
+    print(f"{message}")

@@ -11,5 +11,5 @@ def handle_date_command():
     now = datetime.now()
     current_date = now.strftime("%d %B %Y")
     speak(f"Şu an tarih {current_date}")
-    print(f"📅 Tarih bilgisi verildi: {current_date}")
+    print(f"Tarih bilgisi verildi: {current_date}")
 

@@ -24,10 +24,10 @@ def fetch_current_weather():
             return None
 
     except requests.Timeout:
-        print("⏱️ Hava durumu isteği zaman aşımına uğradı.")
+        print("Hava durumu isteği zaman aşımına uğradı.")
     except requests.RequestException as e:
-        print(f"🌐 Hava durumu API hatası: {e}")
+        print(f"Hava durumu API hatası: {e}")
     except Exception as e:
-        print(f"❌ Beklenmeyen hava durumu hatası: {e}")
+        print(f"Beklenmeyen hava durumu hatası: {e}")
 
     return None

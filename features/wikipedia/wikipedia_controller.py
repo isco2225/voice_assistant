@@ -14,6 +14,6 @@ def search_wikipedia():
         speak(f"{topic} hakkında araştırıyorum...")
         summary = fetch_wikipedia_summary(topic)
         speak(summary)
-        print(f"📚 Wikipedia: {summary}")
+        print(f"Wikipedia: {summary}")
     else:
         speak("Hiçbir konu algılayamadım.")
