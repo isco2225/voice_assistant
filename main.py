@@ -6,7 +6,7 @@ from utils.printer import systemPrint, customPrint, Emojis
 
 def main():
     systemPrint("Sesli Asistan başlatılıyor...")
-    handle_welcome()
+    #handle_welcome()
     while True:
         try:
             customPrint(Emojis.MICROPHONE, "Dinleme başladı...")

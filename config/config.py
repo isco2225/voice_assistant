@@ -30,6 +30,13 @@ TRANSLATE_API_URL = os.getenv("TRANSLATE_API_URL")
 FACTS_API_URL = os.getenv("FACTS_API_URL")
 HISTORY_TODAY_API_URL = os.getenv("HISTORY_TODAY_API_URL")
 EXCHANGE_RATE_API_URL = os.getenv("EXCHANGE_RATE_API_URL")
+
+# ------------------------------
+# API Key
+# ------------------------------
+NASA_API_URL = os.getenv("NASA_API_URL")
+NASA_API_KEY = os.getenv("NASA_API_KEY")
+
 # ------------------------------
 # 🔈 Bip Sesi Ayarları
 # ------------------------------

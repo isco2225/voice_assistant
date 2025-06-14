@@ -23,6 +23,9 @@ from features.exchange_rate.exchange_rate_controller import tell_exchange_rate
 # weather
 from features.weather.weather_controller import give_weather_advice
 
+# weather
+from features.space_information.space_information_controller import give_space_info
+
 __all__ = [
     "give_fact",
     "open_application",
@@ -34,4 +37,5 @@ __all__ = [
     "search_wikipedia",
     "tell_exchange_rate",
     "give_weather_advice",
+    "give_space_info",
 ]

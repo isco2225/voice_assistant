@@ -19,6 +19,7 @@ COMMAND_ACTIONS = {
     "wikipedia_search": search_wikipedia,
     "exchange_rate": tell_exchange_rate,
     "weather": give_weather_advice,
+    "space_information": give_space_info,
 }
 
 def handle_command(text: str):
@@ -29,5 +30,4 @@ def handle_command(text: str):
         customPrint(Emojis.SEARCH, f"Eşleşen komut: {command_key}")
         COMMAND_ACTIONS[command_key]()
     else:
-        print("Anlayamadım.")
         warningPrint(f"Anlaşılamayan komut: {text}")
