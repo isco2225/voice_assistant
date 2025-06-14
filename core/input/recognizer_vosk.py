@@ -10,7 +10,7 @@ recognizer = KaldiRecognizer(model, 16000)
 
 def callback(indata, frames, time, status):
     if status:
-        print(f"⚠️ [mic status] {status}")
+        print(f"[mic status] {status}")
     q.put(bytes(indata))
 
 def recognize_with_vosk():

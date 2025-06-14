@@ -17,9 +17,9 @@ def fetch_today_event():
             if year and text:
                 return year, text
             else:
-                print("⚠️ Etkinlik verisi eksik.")
+                print("Etkinlik verisi eksik.")
         else:
-            print("⚠️ Etkinlik listesi boş.")
+            print("Etkinlik listesi boş.")
 
     except requests.Timeout:
         print("⏱️ İstek zaman aşımına uğradı.")

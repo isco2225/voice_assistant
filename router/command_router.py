@@ -1,6 +1,6 @@
 from utils.normalizer import normalize_text
 from utils.fuzzy_matcher import match_command
-from utils.printer import customPrint, warningPrint, Emojis
+from utils.printer import Colors, customPrint
 from features.registry import *
 
 COMMAND_ACTIONS = {
@@ -28,7 +28,7 @@ def handle_command(text: str):
     command_key = match_command(normalized)
 
     if command_key:
-        customPrint(Emojis.SEARCH, f"Eşleşen komut: {command_key}")
+        customPrint(f"Eşleşen komut: {command_key}", color=Colors.GREEN)
         COMMAND_ACTIONS[command_key]()
     else:
-        warningPrint(f"Anlaşılamayan komut: {text}")
+        customPrint(f"Anlaşılamayan komut: {text}", color=Colors.RED)

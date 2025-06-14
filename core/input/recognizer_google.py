@@ -11,7 +11,6 @@ def recognize_with_google():
                 timeout=None,
                 phrase_time_limit=RECOGNITION_PHRASE_TIMEOUT
             )
-            print('google api ile yapıldı')
         except sr.WaitTimeoutError:
             raise RecognitionError("Konuşma algılanamadı (timeout).")
 

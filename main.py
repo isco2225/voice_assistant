@@ -2,17 +2,17 @@ from core.interface.recognizer import recognize_speech
 from core.exceptions import RecognitionError
 from features.welcome.welcome import handle_welcome
 from router.command_router import handle_command
-from utils.printer import systemPrint, customPrint, Emojis
+from utils.printer import Colors, customPrint
 
 def main():
-    systemPrint("Sesli Asistan başlatılıyor...")
+    customPrint("Sesli Asistan başlatılıyor...")
     #handle_welcome()
     while True:
         try:
-            customPrint(Emojis.MICROPHONE, "Dinleme başladı...")
+            customPrint("Dinleme başladı...",color= Colors.BLUE)
             text = recognize_speech()
             if text:
-                customPrint(Emojis.MATCH, f"Algılanan komut: {text}")
+                customPrint(f"Algılanan komut: {text}")
                 handle_command(text)
         except RecognitionError as e:
             print(str(e))

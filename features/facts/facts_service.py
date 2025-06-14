@@ -11,7 +11,7 @@ def fetch_random_fact():
         if text:
             return text
         else:
-            print("⚠️ API yanıtında 'text' bulunamadı.")
+            print("API yanıtında 'text' bulunamadı.")
             return None
     except requests.Timeout:
         print("⏱️ İstek zaman aşımına uğradı.")

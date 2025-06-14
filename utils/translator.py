@@ -10,7 +10,7 @@ def translate_to_turkish(text):
         if translated:
             return translated
         else:
-            print("⚠️ API yanıtında çeviri bulunamadı.")
+            print("API yanıtında çeviri bulunamadı.")
             return None
     except requests.Timeout:
         print("⏱️ Çeviri API zaman aşımına uğradı.")

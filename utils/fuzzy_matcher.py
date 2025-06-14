@@ -1,5 +1,6 @@
 from rapidfuzz import process
 from utils.normalizer import normalize_text
+from utils.printer import Colors, customPrint
 
 
 COMMAND_MAP = {
@@ -43,7 +44,7 @@ def match_command(text: str, threshold: int = 75) -> str | None:
     result = process.extractOne(normalized_text, normalized_commands.keys())
     if result:
         best_match, score, _ = result
-        print(f"Eşleşme: {best_match} (skor: {score})")
+        customPrint(f"Eşleşme: {best_match} (skor: {score})")
         if score >= threshold:
             return normalized_commands[best_match]
     return None

@@ -18,7 +18,7 @@ def fetch_space_info():
                 "url": url
             }
         else:
-            print("⚠️ Beklenen veri alanları eksik.")
+            print("Beklenen veri alanları eksik.")
             return None
 
     except requests.Timeout:

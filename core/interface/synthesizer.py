@@ -7,7 +7,7 @@ def speak(text: str):
         try:
             speak_with_gtts(text)
         except Exception as e:
-            print(f"⚠️ gTTS başarısız: {e}, offline moda geçiliyor.")
+            print(f"gTTS başarısız: {e}, offline moda geçiliyor.")
             speak_with_pyttsx3(text)
     else:
         speak_with_pyttsx3(text)

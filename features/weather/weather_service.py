@@ -20,7 +20,7 @@ def fetch_current_weather():
                 "weather_code": weather_code
             }
         else:
-            print("⚠️ Hava durumu verisi eksik.")
+            print("Hava durumu verisi eksik.")
             return None
 
     except requests.Timeout:

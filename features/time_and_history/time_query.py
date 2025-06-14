@@ -5,7 +5,7 @@ def handle_time_command():
     now = datetime.now()
     current_time = now.strftime("%H:%M")
     speak(f"Şu an saat {current_time}")
-    print(f"🕒 Saat bilgisi verildi: {current_time}")
+    print(f"Saat bilgisi verildi: {current_time}")
 
 def handle_date_command():
     now = datetime.now()

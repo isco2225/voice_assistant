@@ -18,7 +18,7 @@ def fetch_exchange_data():
                 "eur": float(eur)
             }
         else:
-            print("⚠️ Kur verilerinden bazıları eksik.")
+            print("Kur verilerinden bazıları eksik.")
             return None
 
     except requests.Timeout:
