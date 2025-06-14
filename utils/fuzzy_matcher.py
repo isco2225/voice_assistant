@@ -24,8 +24,6 @@ COMMAND_MAP = {
     "bugün tarih": "date",
     "bugünün tarihi": "date",
     "bilgi ver": "fact",
-    "rastgele bilgi": "fact",
-    "bir bilgi ver": "fact",
     "bugün ne oldu": "history_today",
     "tarihte bugün": "history_today",
     "internette araştır": "wikipedia_search",
@@ -34,6 +32,8 @@ COMMAND_MAP = {
     "döviz kuru": "exchange_rate",
     "hava durumu": "weather",
     "hava nasıl": "weather",
+    "uzay bilgisi": "space_information",
+    "uzay fotoğraf": "space_information",
 }
 
 def match_command(text: str, threshold: int = 75) -> str | None:
