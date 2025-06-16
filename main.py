@@ -6,7 +6,7 @@ from utils.printer import Colors, customPrint
 
 def main():
     customPrint("Sesli Asistan başlatılıyor...")
-    #handle_welcome()
+    handle_welcome()
     while True:
         try:
             customPrint("Dinleme başladı...",color= Colors.BLUE)
