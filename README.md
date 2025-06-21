@@ -29,3 +29,11 @@ Bu proje, Python diliyle geliştirilen, bilgisayarla sesli etkileşim kurmayı s
 | `transformers` (HuggingFace) | AI sohbet motoru |
 | `pyaudio` veya `sounddevice` | Mikrofon erişimi |
 | `Google Translate API` | (isteğe bağlı) çeviri desteği |
+
+---
+
+
+🖼️ Proje Sunumundan Kareler
+<img src="images/WhatsApp Görsel 2025-06-18 saat 10.37.53_db034588.jpg" width="500"/>
+<img src="images/WhatsApp Görsel 2025-06-18 saat 10.37.52_edf7aa8e.jpg" width="400"/>
+<img src="images/WhatsApp Görsel 2025-06-18 saat 10.37.53_d6924f78.jpg" width="500"/>
