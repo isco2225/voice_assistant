@@ -34,6 +34,7 @@ Bu proje, Python diliyle geliştirilen, bilgisayarla sesli etkileşim kurmayı s
 
 
 🖼️ Proje Sunumundan Kareler
+
 <img src="images/WhatsApp Görsel 2025-06-18 saat 10.37.53_db034588.jpg" width="500"/>
 <img src="images/WhatsApp Görsel 2025-06-18 saat 10.37.52_edf7aa8e.jpg" width="400"/>
 <img src="images/WhatsApp Görsel 2025-06-18 saat 10.37.53_d6924f78.jpg" width="500"/>
