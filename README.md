@@ -11,7 +11,7 @@ Bu proje, Python diliyle geliştirilen, bilgisayarla sesli etkileşim kurmayı s
 - 🌐 Hava durumu bilgisi alma (Open-Meteo API)
 - 🗓️ “Tarihte Bugün Ne Oldu?” özelliği
 - 📚 Wikipedia’dan sesli bilgi araştırma (TR)
-- 💬 FLAN-T5 destekli AI sohbet modülü
+- 💬 Llama 3 destekli AI sohbet özelliği
 - 🌍 Çoklu dil desteği (isteğe bağlı çeviri)
 - ⚙️ Modüler mimari: `core/`, `features/`, `utils/`, `interface/`
 - ⏳ Zaman tabanlı karşılama mesajı ve döviz/hava durumu önerileri
