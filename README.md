@@ -8,12 +8,11 @@ Bu proje, Python diliyle geliştirilen, bilgisayarla sesli etkileşim kurmayı s
 
 - 🎤 Sürekli mikrofon dinleme (konuşma başladığında otomatik algılama)
 - 🔊 Doğal sesli geri bildirim (TTS)
-- 🌐 Hava durumu bilgisi alma (Open-Meteo API)
+- 🌐 canlı hava durumu bilgisi alma ve havaya göre kıyafet önerisi
 - 🗓️ “Tarihte Bugün Ne Oldu?” özelliği
-- 📚 Wikipedia’dan sesli bilgi araştırma (TR)
+- 📚 Wikipedia’dan sesli bilgi araştırma
 - 💬 Llama 3 destekli AI sohbet özelliği
-- 🌍 Çoklu dil desteği (isteğe bağlı çeviri)
-- ⚙️ Modüler mimari: `core/`, `features/`, `utils/`, `interface/`
+- 💲 Canlı döviz kuru bilgisi
 - ⏳ Zaman tabanlı karşılama mesajı ve döviz/hava durumu önerileri
 
 ---
